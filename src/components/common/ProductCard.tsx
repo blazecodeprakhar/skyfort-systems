@@ -55,18 +55,31 @@ const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
           </span>
         </div>
 
-        {/* Icon Section */}
-        <div className="relative h-48 bg-gradient-to-br from-navy-600 to-secondary flex items-center justify-center overflow-hidden">
-          <div className="absolute inset-0 bg-grid-pattern opacity-20" />
-          <div className="relative">
-            <div className={cn(
-              'w-20 h-20 rounded-2xl flex items-center justify-center',
-              'bg-white/10 backdrop-blur-sm border border-white/20',
-              'group-hover:scale-110 transition-transform duration-300'
-            )}>
-              <Icon className="w-10 h-10 text-accent" />
-            </div>
-          </div>
+        {/* Image/Icon Section */}
+        <div className="relative h-48 bg-gradient-to-br from-navy-600 to-secondary overflow-hidden">
+          {product.image ? (
+            <>
+              <img
+                src={product.image}
+                alt={product.name}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-600/80 via-navy-600/20 to-transparent" />
+            </>
+          ) : (
+            <>
+              <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+              <div className="relative h-full flex items-center justify-center">
+                <div className={cn(
+                  'w-20 h-20 rounded-2xl flex items-center justify-center',
+                  'bg-white/10 backdrop-blur-sm border border-white/20',
+                  'group-hover:scale-110 transition-transform duration-300'
+                )}>
+                  <Icon className="w-10 h-10 text-accent" />
+                </div>
+              </div>
+            </>
+          )}
         </div>
 
         {/* Content */}
