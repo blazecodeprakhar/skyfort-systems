@@ -84,50 +84,50 @@ const DefenseSystemVisualization = () => {
 
   const getColorClass = (color: string) => {
     const colorMap: Record<string, { bg: string; border: string; shadow: string }> = {
-      'accent': { 
-        bg: 'bg-accent', 
-        border: 'border-accent', 
-        shadow: 'shadow-[0_0_30px_rgba(46,139,87,0.5)]' 
+      'accent': {
+        bg: 'bg-accent',
+        border: 'border-accent',
+        shadow: 'shadow-[0_0_30px_rgba(46,139,87,0.5)]'
       },
-      'military-400': { 
-        bg: 'bg-military-400', 
-        border: 'border-military-400', 
-        shadow: 'shadow-[0_0_30px_rgba(46,139,87,0.5)]' 
+      'military-400': {
+        bg: 'bg-military-400',
+        border: 'border-military-400',
+        shadow: 'shadow-[0_0_30px_rgba(46,139,87,0.5)]'
       },
-      'highlight': { 
-        bg: 'bg-highlight', 
-        border: 'border-highlight', 
-        shadow: 'shadow-[0_0_30px_rgba(212,175,55,0.5)]' 
+      'highlight': {
+        bg: 'bg-highlight',
+        border: 'border-highlight',
+        shadow: 'shadow-[0_0_30px_rgba(212,175,55,0.5)]'
       },
     };
     return colorMap[color] || colorMap['accent'];
   };
 
   return (
-    <section className="py-20 bg-navy-600 relative overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-navy-600 relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-      
-      <div className="container mx-auto px-4">
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12 lg:mb-16"
         >
-          <span className="inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-accent/20 text-accent mb-4">
+          <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-accent/20 text-accent mb-3 sm:mb-4">
             Integrated Defense
           </span>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4">
+          <h2 className="font-heading font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-3 sm:mb-4 px-4">
             Connected Defense Ecosystem
           </h2>
-          <p className="text-white/70 text-lg max-w-2xl mx-auto">
+          <p className="text-white/70 text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4">
             See how our systems work together to provide comprehensive situational awareness and protection
           </p>
         </motion.div>
 
         {/* Interactive Visualization */}
-        <div className="relative w-full aspect-[2/1] md:aspect-[3/1] max-w-5xl mx-auto">
+        <div className="relative w-full aspect-[4/5] sm:aspect-[3/2] md:aspect-[2/1] lg:aspect-[5/2] max-w-6xl mx-auto px-4 sm:px-0">
           {/* SVG Connections */}
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
             <defs>
@@ -141,7 +141,7 @@ const DefenseSystemVisualization = () => {
               const fromPos = getNodePosition(conn.from);
               const toPos = getNodePosition(conn.to);
               const isActive = activeNode === conn.from || activeNode === conn.to;
-              
+
               return (
                 <motion.line
                   key={i}
@@ -153,7 +153,7 @@ const DefenseSystemVisualization = () => {
                   strokeWidth={isActive ? "0.5" : "0.3"}
                   className="signal-line"
                   initial={{ pathLength: 0 }}
-                  animate={{ 
+                  animate={{
                     pathLength: 1,
                     opacity: isActive ? 1 : 0.5,
                   }}
@@ -190,11 +190,11 @@ const DefenseSystemVisualization = () => {
                   colors.bg,
                   'opacity-20'
                 )} style={{ animationDuration: '2s' }} />
-                
+
                 {/* Node Circle */}
                 <motion.div
                   className={cn(
-                    'relative w-14 h-14 md:w-20 md:h-20 rounded-full cursor-pointer',
+                    'relative w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 rounded-full cursor-pointer',
                     'flex items-center justify-center',
                     'border-2 transition-all duration-300',
                     colors.border,
@@ -202,7 +202,7 @@ const DefenseSystemVisualization = () => {
                     'bg-navy-600'
                   )}
                   whileHover={{ scale: 1.15 }}
-                  animate={{ 
+                  animate={{
                     scale: isActive ? 1.1 : 1,
                   }}
                 >
@@ -212,7 +212,7 @@ const DefenseSystemVisualization = () => {
                     'opacity-20'
                   )} />
                   <Icon className={cn(
-                    'w-6 h-6 md:w-8 md:h-8 relative z-10',
+                    'w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 relative z-10',
                     node.color === 'accent' && 'text-accent',
                     node.color === 'military-400' && 'text-military-400',
                     node.color === 'highlight' && 'text-highlight',
@@ -220,21 +220,21 @@ const DefenseSystemVisualization = () => {
                 </motion.div>
 
                 {/* Label */}
-                <div className="absolute top-full mt-2 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                  <span className="text-white text-xs md:text-sm font-medium">{node.label}</span>
+                <div className="absolute top-full mt-1 sm:mt-2 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                  <span className="text-white text-[10px] sm:text-xs md:text-sm lg:text-base font-medium">{node.label}</span>
                 </div>
 
                 {/* Tooltip */}
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
-                  animate={{ 
+                  animate={{
                     opacity: isActive ? 1 : 0,
                     y: isActive ? 0 : 10,
                   }}
                   className={cn(
                     'absolute bottom-full mb-3 left-1/2 transform -translate-x-1/2',
-                    'bg-white rounded-lg shadow-xl p-4 w-64',
-                    'pointer-events-none z-20'
+                    'bg-white rounded-lg shadow-xl p-3 sm:p-4 w-48 sm:w-56 md:w-64',
+                    'pointer-events-none z-20 hidden sm:block'
                   )}
                 >
                   <h4 className="font-heading font-semibold text-navy-600 mb-1">{node.label}</h4>
@@ -250,15 +250,15 @@ const DefenseSystemVisualization = () => {
         </div>
 
         {/* Legend */}
-        <div className="flex flex-wrap justify-center gap-6 mt-16">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-8 sm:mt-12 lg:mt-16 px-4">
           {[
             { color: 'bg-accent', label: 'Intelligence & Surveillance' },
             { color: 'bg-military-400', label: 'Defense Systems' },
             { color: 'bg-highlight', label: 'Communications' },
           ].map((item) => (
             <div key={item.label} className="flex items-center gap-2">
-              <div className={cn('w-3 h-3 rounded-full', item.color)} />
-              <span className="text-white/70 text-sm">{item.label}</span>
+              <div className={cn('w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full', item.color)} />
+              <span className="text-white/70 text-xs sm:text-sm">{item.label}</span>
             </div>
           ))}
         </div>
