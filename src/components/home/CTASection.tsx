@@ -49,15 +49,7 @@ const CTASection = () => {
               />
 
               <div className="space-y-6 mt-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-accent" />
-                  </div>
-                  <div>
-                    <h4 className="font-medium text-foreground mb-1">Call Us</h4>
-                    <p className="text-muted-foreground text-sm">+91-11-4567-8900</p>
-                  </div>
-                </div>
+
 
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
@@ -111,7 +103,7 @@ const CTASection = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="John Smith"
+                      placeholder="Your Name"
                       required
                       className="bg-background"
                     />
@@ -125,7 +117,7 @@ const CTASection = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="john@example.gov"
+                      placeholder="your.email@gmail.com"
                       required
                       className="bg-background"
                     />

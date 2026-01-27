@@ -139,7 +139,7 @@ const Contact = () => {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="John Smith"
+                      placeholder="Your Name"
                       required
                     />
                   </div>
@@ -152,7 +152,7 @@ const Contact = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="john@example.com"
+                      placeholder="your.email@gmail.com"
                       required
                     />
                   </div>
@@ -168,7 +168,7 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+91 99999 99999"
+                      placeholder="XXXXXXXXXX"
                     />
                   </div>
                   <div>
