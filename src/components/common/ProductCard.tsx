@@ -11,20 +11,12 @@ interface ProductCardProps {
 }
 
 const subcategoryIcons: Record<string, React.ElementType> = {
-  'ISR': Satellite,
-  'Satellite Monitoring': Satellite,
-  'Cellular Monitoring': Radio,
-  'Lawful Interception': Lock,
-  'Radio Monitoring': Radio,
-  'Cyber Intelligence': Shield,
-  'Network Intelligence': Shield,
-  'Electronic Warfare': Crosshair,
-  'Radars': Radar,
-  'Fire Control': Crosshair,
-  'Air Defense': Shield,
-  'C4IS': Shield,
-  'Communication Security': Lock,
-  'Satellite Imagery': Satellite,
+  'Electronic Warfare': Radio,
+  'C-UAS': Shield,
+  'UAS': Satellite,
+  'Firing Ranges': Crosshair,
+  'Shoot Houses': Crosshair,
+  'AI Software': Radar,
 };
 
 const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
@@ -47,7 +39,7 @@ const ProductCard = ({ product, index = 0 }: ProductCardProps) => {
         <div className="absolute top-4 right-4 z-10">
           <span className={cn(
             'px-3 py-1 text-xs font-semibold rounded-full',
-            product.category === 'intelligence'
+            product.category === 'Electronic Warfare & C-UAS'
               ? 'bg-accent/20 text-accent'
               : 'bg-highlight/20 text-highlight'
           )}>

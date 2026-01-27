@@ -13,11 +13,12 @@ const Footer = () => {
   ];
 
   const productLinks = [
-    { name: 'ISR Solutions', href: '/products?category=ISR' },
-    { name: 'Cyber Intelligence', href: '/products?category=Cyber Intelligence' },
     { name: 'Electronic Warfare', href: '/products?category=Electronic Warfare' },
-    { name: 'Radar Systems', href: '/products?category=Radars' },
-    { name: 'C4IS Platforms', href: '/products?category=C4IS' },
+    { name: 'C-UAS Solutions', href: '/products?category=C-UAS' },
+    { name: 'Tactical UAS', href: '/products?category=UAS' },
+    { name: 'Firing Ranges', href: '/products?category=Firing Ranges' },
+    { name: 'Shoot Houses', href: '/products?category=Shoot Houses' },
+    { name: 'AI Training Software', href: '/products?category=AI Software' },
   ];
 
   return (
@@ -28,15 +29,19 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center">
-                <Shield className="w-6 h-6 text-accent-foreground" />
+              <div className="w-10 h-10 rounded-lg bg-accent flex items-center justify-center overflow-hidden">
+                <img
+                  src="/logo.png"
+                  alt="RAVVIK Logo"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <span className="font-heading font-bold text-xl">
-                AegisTech<span className="text-accent">.</span>
+                RAVVIK<span className="text-accent">.</span>
               </span>
             </Link>
             <p className="text-white/70 text-sm leading-relaxed">
-              AegisTech Systems is a global leader in defense technology, providing advanced intelligence, surveillance, and reconnaissance solutions to governments and defense organizations worldwide.
+              RAVVIK Global Solutions is a defence deep-technology company focused on the indigenous design, development, and integration of advanced defence and security systems.
             </p>
             <div className="flex gap-3">
               <a
@@ -104,21 +109,20 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-accent flex-shrink-0 mt-0.5" />
                 <span className="text-white/70 text-sm">
-                  AegisTech Systems HQ<br />
-                  1200 Defense Boulevard<br />
-                  Arlington, VA 22202, USA
+                  BUNGLOW NO. 62, SAINT PATRICKS TOWN HOUSING SOCIETY, HADAPSAR MIDC ROAD,<br />
+                  HADAPSAR INDUSTRIAL ESTATE, WANOVARLE, PUNE - 411 013.
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-accent flex-shrink-0" />
-                <a href="tel:+1-800-AEGIS-01" className="text-white/70 hover:text-accent text-sm transition-colors">
-                  +1-800-AEGIS-01
+                <a href="tel:+917777022666" className="text-white/70 hover:text-accent text-sm transition-colors">
+                  +91 - 77770 22666
                 </a>
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="w-5 h-5 text-accent flex-shrink-0" />
-                <a href="mailto:info@aegistech.com" className="text-white/70 hover:text-accent text-sm transition-colors">
-                  info@aegistech.com
+                <a href="mailto:ravvikglobal@gmail.com" className="text-white/70 hover:text-accent text-sm transition-colors">
+                  ravvikglobal@gmail.com
                 </a>
               </li>
             </ul>
@@ -131,7 +135,7 @@ const Footer = () => {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-white/50 text-sm text-center md:text-left">
-              © {currentYear} AegisTech Systems. All rights reserved.
+              © {currentYear} RAVVIK Global Solutions. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <Link to="#" className="text-white/50 hover:text-accent transition-colors">

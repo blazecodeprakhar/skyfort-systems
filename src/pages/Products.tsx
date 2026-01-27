@@ -10,32 +10,24 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 
 const subcategories = {
-  intelligence: [
-    'All',
-    'ISR',
-    'Satellite Monitoring',
-    'Cellular Monitoring',
-    'Lawful Interception',
-    'Radio Monitoring',
-    'Cyber Intelligence',
-    'Network Intelligence',
-  ],
-  defense: [
+  'Electronic Warfare & C-UAS': [
     'All',
     'Electronic Warfare',
-    'Radars',
-    'Fire Control',
-    'Air Defense',
-    'C4IS',
-    'Communication Security',
-    'Satellite Imagery',
+    'C-UAS',
+    'UAS',
+  ],
+  'Tactical Training': [
+    'All',
+    'Firing Ranges',
+    'Shoot Houses',
+    'AI Software',
   ],
 };
 
 const Products = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeCategory, setActiveCategory] = useState<'all' | 'intelligence' | 'defense'>('all');
+  const [activeCategory, setActiveCategory] = useState<'all' | 'Electronic Warfare & C-UAS' | 'Tactical Training'>('all');
   const [activeSubcategory, setActiveSubcategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
@@ -57,7 +49,7 @@ const Products = () => {
 
     // Filter by URL category parameter
     if (urlCategory) {
-      result = result.filter(p => 
+      result = result.filter(p =>
         p.subcategory.toLowerCase().includes(urlCategory.toLowerCase())
       );
     }
@@ -75,7 +67,7 @@ const Products = () => {
     return result;
   }, [activeCategory, activeSubcategory, searchQuery, urlCategory]);
 
-  const handleCategoryChange = (category: 'all' | 'intelligence' | 'defense') => {
+  const handleCategoryChange = (category: 'all' | 'Electronic Warfare & C-UAS' | 'Tactical Training') => {
     setActiveCategory(category);
     setActiveSubcategory('All');
     setSearchParams({});
@@ -96,10 +88,10 @@ const Products = () => {
               Products
             </span>
             <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6">
-              Defense Solutions
+              Defence Solutions
             </h1>
             <p className="text-white/70 text-lg md:text-xl mb-8">
-              Explore our comprehensive portfolio of intelligence and defense systems
+              Explore our comprehensive portfolio of indigenous defence and security systems
             </p>
 
             {/* Search Bar */}
@@ -123,7 +115,7 @@ const Products = () => {
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
             {/* Category Tabs */}
             <div className="flex flex-wrap gap-2">
-              {(['all', 'intelligence', 'defense'] as const).map((cat) => (
+              {(['all', 'Electronic Warfare & C-UAS', 'Tactical Training'] as const).map((cat) => (
                 <button
                   key={cat}
                   onClick={() => handleCategoryChange(cat)}
@@ -134,7 +126,7 @@ const Products = () => {
                       : 'bg-muted text-muted-foreground hover:bg-muted/80'
                   )}
                 >
-                  {cat === 'all' ? 'All Products' : cat === 'intelligence' ? 'Intelligence' : 'Defense'}
+                  {cat === 'all' ? 'All Products' : cat}
                 </button>
               ))}
             </div>
@@ -179,7 +171,7 @@ const Products = () => {
                   className={cn(
                     'px-3 py-1.5 rounded-full text-xs font-medium transition-all',
                     activeSubcategory === sub
-                      ? activeCategory === 'intelligence'
+                      ? activeCategory === 'Electronic Warfare & C-UAS'
                         ? 'bg-accent/20 text-accent border border-accent/30'
                         : 'bg-highlight/20 text-highlight border border-highlight/30'
                       : 'bg-muted text-muted-foreground hover:bg-muted/80'
@@ -219,11 +211,11 @@ const Products = () => {
                     >
                       <div className={cn(
                         'w-16 h-16 rounded-xl flex items-center justify-center flex-shrink-0',
-                        product.category === 'intelligence' ? 'bg-accent/10' : 'bg-highlight/10'
+                        product.category === 'Electronic Warfare & C-UAS' ? 'bg-accent/10' : 'bg-highlight/10'
                       )}>
                         <Filter className={cn(
                           'w-8 h-8',
-                          product.category === 'intelligence' ? 'text-accent' : 'text-highlight'
+                          product.category === 'Electronic Warfare & C-UAS' ? 'text-accent' : 'text-highlight'
                         )} />
                       </div>
                       <div className="flex-1 min-w-0">
@@ -236,7 +228,7 @@ const Products = () => {
                       </div>
                       <span className={cn(
                         'px-3 py-1 text-xs font-medium rounded-full flex-shrink-0',
-                        product.category === 'intelligence'
+                        product.category === 'Electronic Warfare & C-UAS'
                           ? 'bg-accent/10 text-accent'
                           : 'bg-highlight/10 text-highlight'
                       )}>

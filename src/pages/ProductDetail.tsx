@@ -8,20 +8,12 @@ import ProductCard from '@/components/common/ProductCard';
 import { cn } from '@/lib/utils';
 
 const subcategoryIcons: Record<string, React.ElementType> = {
-  'ISR': Satellite,
-  'Satellite Monitoring': Satellite,
-  'Cellular Monitoring': Radio,
-  'Lawful Interception': Lock,
-  'Radio Monitoring': Radio,
-  'Cyber Intelligence': Shield,
-  'Network Intelligence': Shield,
-  'Electronic Warfare': Crosshair,
-  'Radars': Radar,
-  'Fire Control': Crosshair,
-  'Air Defense': Shield,
-  'C4IS': Shield,
-  'Communication Security': Lock,
-  'Satellite Imagery': Satellite,
+  'Electronic Warfare': Radio,
+  'C-UAS': Shield,
+  'UAS': Satellite,
+  'Firing Ranges': Crosshair,
+  'Shoot Houses': Crosshair,
+  'AI Software': Radar,
 };
 
 const ProductDetail = () => {
@@ -47,7 +39,7 @@ const ProductDetail = () => {
   }
 
   const Icon = subcategoryIcons[product.subcategory] || Shield;
-  
+
   // Get related products
   const relatedProducts = products
     .filter(p => p.id !== product.id && (p.subcategory === product.subcategory || p.category === product.category))
@@ -82,7 +74,7 @@ const ProductDetail = () => {
             >
               <span className={cn(
                 'inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full mb-4',
-                product.category === 'intelligence'
+                product.category === 'Electronic Warfare & C-UAS'
                   ? 'bg-accent/20 text-accent'
                   : 'bg-highlight/20 text-highlight'
               )}>
@@ -116,7 +108,7 @@ const ProductDetail = () => {
                 )}>
                   <Icon className={cn(
                     'w-24 h-24 md:w-32 md:h-32',
-                    product.category === 'intelligence' ? 'text-accent' : 'text-highlight'
+                    product.category === 'Electronic Warfare & C-UAS' ? 'text-accent' : 'text-highlight'
                   )} />
                 </div>
               </div>

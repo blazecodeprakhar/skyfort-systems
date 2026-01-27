@@ -7,10 +7,10 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight } from 'lucide-react';
 
 const FeaturedProducts = () => {
-  // Get 6 featured products (mix of intelligence and defense)
+  // Get 6 featured products (mix of EW and Training)
   const featuredProducts = [
-    ...products.filter(p => p.category === 'intelligence').slice(0, 3),
-    ...products.filter(p => p.category === 'defense').slice(0, 3),
+    ...products.filter(p => p.category === 'Electronic Warfare & C-UAS').slice(0, 3),
+    ...products.filter(p => p.category === 'Tactical Training').slice(0, 3),
   ];
 
   return (

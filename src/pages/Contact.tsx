@@ -36,22 +36,25 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Headquarters',
-      details: ['AegisTech Systems HQ', '1200 Defense Boulevard', 'Arlington, VA 22202, USA'],
+      details: [
+        'BUNGLOW NO. 62, SAINT PATRICKS TOWN HOUSING SOCIETY',
+        'HADAPSAR MIDC ROAD, PUNE - 411 013'
+      ],
     },
     {
       icon: Phone,
       title: 'Phone',
-      details: ['+1-800-AEGIS-01', '+1 (703) 555-0199'],
+      details: ['+91 - 77770 22666'],
     },
     {
       icon: Mail,
       title: 'Email',
-      details: ['info@aegistech.com', 'sales@aegistech.com'],
+      details: ['ravvikglobal@gmail.com'],
     },
     {
       icon: Clock,
       title: 'Business Hours',
-      details: ['Monday - Friday: 8:00 AM - 6:00 PM EST', 'Weekend: Emergency Support Only'],
+      details: ['Monday - Friday: 9:00 AM - 6:00 PM IST', 'Weekend: Emergency Support Only'],
     },
   ];
 
@@ -73,7 +76,7 @@ const Contact = () => {
               Get In Touch
             </h1>
             <p className="text-white/70 text-lg md:text-xl">
-              Ready to discuss your defense and security requirements? 
+              Ready to discuss your defence and security requirements?
               Our team of experts is here to help.
             </p>
           </motion.div>
@@ -149,7 +152,7 @@ const Contact = () => {
                       type="email"
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="john@example.gov"
+                      placeholder="john@example.com"
                       required
                     />
                   </div>
@@ -165,7 +168,7 @@ const Contact = () => {
                       type="tel"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+91 99999 99999"
                     />
                   </div>
                   <div>
@@ -226,14 +229,14 @@ const Contact = () => {
               {/* Map Placeholder */}
               <div className="bg-muted rounded-2xl overflow-hidden h-80 lg:h-96 relative">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3106.8321256789!2d-77.0688!3d38.8766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDUyJzM1LjgiTiA3N8KwMDQnMDcuNyJX!5e0!3m2!1sen!2sus!4v1600000000000!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121059.0471115689!2d73.7925712128636!3d18.524598600000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c147b8b3a3bf%3A0x6f7fdcc8e4131056!2sPune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="AegisTech Systems Location"
+                  title="RAVVIK Global Solutions Location"
                 />
               </div>
 
@@ -244,46 +247,24 @@ const Contact = () => {
                   <h3 className="font-heading font-semibold text-xl">Need Immediate Assistance?</h3>
                 </div>
                 <p className="text-white/70 mb-6">
-                  For urgent inquiries or time-sensitive matters, please contact our 
-                  24/7 operations center directly.
+                  For urgent inquiries or time-sensitive matters, please contact our
+                  support center.
                 </p>
                 <div className="space-y-3">
-                  <a 
-                    href="tel:+1-800-AEGIS-01" 
+                  <a
+                    href="tel:+917777022666"
                     className="flex items-center gap-3 text-accent hover:text-accent/80 transition-colors"
                   >
                     <Phone className="w-5 h-5" />
-                    <span>+1-800-AEGIS-01</span>
+                    <span>+91 - 77770 22666</span>
                   </a>
-                  <a 
-                    href="mailto:urgent@aegistech.com" 
+                  <a
+                    href="mailto:ravvikglobal@gmail.com"
                     className="flex items-center gap-3 text-accent hover:text-accent/80 transition-colors"
                   >
                     <Mail className="w-5 h-5" />
-                    <span>urgent@aegistech.com</span>
+                    <span>ravvikglobal@gmail.com</span>
                   </a>
-                </div>
-              </div>
-
-              {/* Regional Offices */}
-              <div className="bg-card rounded-2xl border border-border p-8">
-                <h3 className="font-heading font-semibold text-xl mb-6 text-foreground">
-                  Regional Offices
-                </h3>
-                <div className="space-y-4">
-                  {[
-                    { location: 'London, UK', address: 'Defence Innovation Hub, Canary Wharf' },
-                    { location: 'Dubai, UAE', address: 'DIFC Gate District, Tower 2' },
-                    { location: 'Singapore', address: 'One Raffles Place, Tower 1' },
-                  ].map((office, i) => (
-                    <div key={i} className="flex items-start gap-3">
-                      <MapPin className="w-5 h-5 text-accent mt-0.5" />
-                      <div>
-                        <div className="font-medium text-foreground">{office.location}</div>
-                        <div className="text-sm text-muted-foreground">{office.address}</div>
-                      </div>
-                    </div>
-                  ))}
                 </div>
               </div>
             </motion.div>

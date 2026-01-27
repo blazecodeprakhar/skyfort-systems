@@ -39,25 +39,24 @@ const AboutSection = () => {
           >
             <SectionTitle
               badge="Who We Are"
-              title="Defending Nations Since 2009"
-              subtitle="AegisTech Systems is a premier provider of advanced defense technology solutions, specializing in intelligence, surveillance, reconnaissance, and electronic warfare systems."
+              title="Indigenously Designed Defence Solutions"
+              subtitle="RAVVIK Global Solutions is a defence deep-technology company focused on the indigenous design, development, and integration of advanced defence and security systems."
               centered={false}
             />
 
             <p className="text-muted-foreground mb-8">
-              With headquarters in Arlington, Virginia, and regional offices across Europe, 
-              the Middle East, and Asia-Pacific, we serve government agencies, defense 
-              ministries, and law enforcement organizations worldwide. Our mission is to 
-              provide cutting-edge technology that ensures operational superiority and 
-              national security.
+              Aligned with the Government of India’s Make in India and Atmanirbhar Bharat initiatives,
+              RAVVIK Global Solutions is committed to building self-reliant, secure, and future-ready
+              defence capabilities through indigenous innovation, local manufacturing, and ownership
+              of critical intellectual property.
             </p>
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6">
               {[
-                { value: '15+', label: 'Years Experience' },
-                { value: '40+', label: 'Countries Served' },
-                { value: '120+', label: 'Defense Projects' },
+                { value: 'Deep Tech', label: 'Ecosystem' },
+                { value: 'Indigenous', label: 'Innovation' },
+                { value: 'Mission', label: 'Ready' },
               ].map((stat, i) => (
                 <motion.div
                   key={i}
@@ -67,7 +66,7 @@ const AboutSection = () => {
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   className="text-center"
                 >
-                  <div className="font-heading font-bold text-3xl md:text-4xl text-accent mb-1">
+                  <div className="font-heading font-bold text-2xl md:text-3xl text-accent mb-1">
                     {stat.value}
                   </div>
                   <div className="text-muted-foreground text-sm">{stat.label}</div>

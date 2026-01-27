@@ -1,56 +1,56 @@
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowRight, Satellite, Shield, Radar, Radio, Lock, Crosshair } from 'lucide-react';
+import { ArrowRight, Satellite, Shield, Target, Radio, Cpu, Crosshair } from 'lucide-react';
 import SectionTitle from '@/components/common/SectionTitle';
 import { cn } from '@/lib/utils';
 
 const capabilities = [
   {
-    icon: Satellite,
-    title: 'ISR',
-    subtitle: 'Intelligence, Surveillance & Reconnaissance',
-    description: 'Space and airborne systems for comprehensive situational awareness and intelligence gathering.',
-    features: ['Satellite Monitoring', 'Aerial Reconnaissance', 'Real-time Analytics'],
+    icon: Radio,
+    title: 'Electronic Warfare',
+    subtitle: 'Spectrum Dominance',
+    description: 'Advanced EW systems enabling spectrum awareness, threat detection, and electronic attack capabilities.',
+    features: ['Spectrum Monitoring', 'Signal Jamming', 'Threat Analysis'],
     color: 'accent',
   },
   {
     icon: Shield,
-    title: 'Cyber Intelligence',
-    subtitle: 'Network & Dark Web Analysis',
-    description: 'Advanced cyber operations including dark web monitoring, network intelligence, and threat detection.',
-    features: ['Dark Web Tracking', 'Network Analysis', 'Threat Intelligence'],
+    title: 'C-UAS Solutions',
+    subtitle: 'Counter-Drone Defense',
+    description: 'Comprehensive counter-unmanned aerial systems for detection, identification, and neutralization.',
+    features: ['Drone Detection', 'Signal Denial', 'Kinetic Interception'],
     color: 'highlight',
+  },
+  {
+    icon: Satellite,
+    title: 'Tactical UAS',
+    subtitle: 'Unmanned Aerial Systems',
+    description: 'Indigenous UAS platforms designed for surveillance, reconnaissance, and tactical operations.',
+    features: ['Aerial Surveillance', 'Target Acquisition', 'Secure Data Link'],
+    color: 'accent',
   },
   {
     icon: Crosshair,
-    title: 'Electronic Warfare',
-    subtitle: 'Jammers & Countermeasures',
-    description: 'RCIED jammers, RF denial systems, and electronic attack capabilities for force protection.',
-    features: ['RCIED Jamming', 'RF Countermeasures', 'GPS Denial'],
-    color: 'accent',
-  },
-  {
-    icon: Radar,
-    title: 'Radar Systems',
-    subtitle: 'Surveillance & Fire Control',
-    description: 'Air defense, ground surveillance, and fire control radars with advanced target tracking.',
-    features: ['Air Defense Radar', 'Ground Surveillance', 'Fire Control'],
+    title: 'Firing Ranges',
+    subtitle: 'Live-Fire Training',
+    description: 'Indigenously designed containerized and permanent firing ranges for safe, realistic training.',
+    features: ['Containerized Ranges', 'Ballistic Safety', 'Target Systems'],
     color: 'highlight',
   },
   {
-    icon: Lock,
-    title: 'Communication Security',
-    subtitle: 'Encrypted Defense Comms',
-    description: 'Tactical radios, satellite terminals, and secure communication infrastructure.',
-    features: ['SDR Radios', 'SATCOM Terminals', 'Encryption'],
+    icon: Target,
+    title: 'Shoot Houses',
+    subtitle: 'CQB & Urban Combat',
+    description: 'Modular shoot houses and Close Quarters Battle facilities for scenario-based tactical training.',
+    features: ['Modular Layouts', 'Breaching Zones', 'Live-Fire Ready'],
     color: 'accent',
   },
   {
-    icon: Radio,
-    title: 'C4IS',
-    subtitle: 'Command & Control Systems',
-    description: 'Unified command platforms integrating all battlefield systems for effective operations.',
-    features: ['Command Centers', 'Blue Force Tracking', 'Decision Support'],
+    icon: Cpu,
+    title: 'AI Training Software',
+    subtitle: 'Performance Analytics',
+    description: 'AI-enabled shot detection, localization, and performance analysis for data-driven training.',
+    features: ['Shot Detection', 'AAR Tools', 'Shooter Metrics'],
     color: 'highlight',
   },
 ];
@@ -61,8 +61,8 @@ const CapabilitiesSection = () => {
       <div className="container mx-auto px-4">
         <SectionTitle
           badge="Our Capabilities"
-          title="Defense Technology Excellence"
-          subtitle="Comprehensive solutions across the full spectrum of defense and intelligence requirements"
+          title="Indigenous Defence Excellence"
+          subtitle="Comprehensive solutions across electronic warfare, unmanned systems, and tactical training"
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

@@ -1,7 +1,7 @@
 export interface Product {
   id: string;
   name: string;
-  category: 'intelligence' | 'defense';
+  category: 'Electronic Warfare & C-UAS' | 'Tactical Training';
   subcategory: string;
   shortDescription: string;
   fullDescription: string;
@@ -11,430 +11,169 @@ export interface Product {
 }
 
 export const products: Product[] = [
-  // Intelligence & Law Enforcement Products
+  // Electronic Warfare & C-UAS
   {
-    id: 'satellite-monitoring-x1',
-    name: 'Satellite Monitoring System X1',
-    category: 'intelligence',
-    subcategory: 'ISR',
-    image: 'https://images.unsplash.com/photo-1446776653964-20c1d3a81b06?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Advanced satellite surveillance platform for real-time global monitoring and intelligence gathering.',
-    fullDescription: 'The Satellite Monitoring System X1 represents the pinnacle of space-based surveillance technology. This comprehensive platform integrates multi-spectral imaging, signals intelligence, and advanced analytics to provide unparalleled situational awareness across any terrain or weather condition.',
+    id: 'c-uas-drone-shield',
+    name: 'RAVVIK Loitering Missile System',
+    category: 'Electronic Warfare & C-UAS',
+    subcategory: 'C-UAS',
+    image: '/loitering-missile.png',
+    shortDescription: 'AI-powered loitering missile system with modular deployment for special missions.',
+    fullDescription: `Developed and manufactured in Taiwan, this advanced loitering missile system features AI vision-based tracking and targeting capabilities. The modular design supports various deployment methods including single-user, airborne, shipborne, and vehicle-mounted configurations.
+
+The system utilizes AI-based visual recognition technology combined with edge computing and path planning functions. It calculates terrain and target coordinates by referencing offline maps, enabling automatic target search, tracking reconnaissance, and high-precision aiming.
+
+Optional integration with multiple sensors allows for operation without GPS when detailed GIS 3D maps are provided, enabling autonomous identification and correction of targets even in harsh electromagnetic environments.
+
+Once a target is confirmed, the system transmits its image and coordinate data in real-time to the ground control station, enabling operators to issue further commands and establish a complete mission feedback and decision-making process.`,
     features: [
-      'Multi-spectral imaging (visible, IR, SAR)',
-      'Real-time data processing and analysis',
-      'Global coverage with constellation support',
-      'AI-powered target recognition',
-      'Encrypted data transmission',
-      'Integration with ground-based systems'
+      'Single-user capable with lightweight launcher for single-person operation',
+      'Dual-mode launch: air pressure / powder gas mix',
+      'Rapid deployment capability',
+      'AI vision-based tracking and targeting system',
+      'Autonomous target search and tracking reconnaissance',
+      'High-precision aiming with edge computing',
+      'GPS-independent operation with GIS 3D maps',
+      'Real-time image and coordinate transmission',
+      'Modular deployment design (Airborne, Shipborne, Vehicle-Mounted)',
+      'Foldable wings with disposable fiber-based material',
+      'Cost-saving, quick production',
+      'Pickup truck-based mobile platform (Civilian or Military)',
+      'Two-man job with quick deployment',
+      'Autonomous execution: Detection → Lock-on → Decision Confirmation → Engagement'
     ],
     useCases: [
-      'Border security monitoring',
-      'Maritime surveillance',
+      'Special mission operations',
+      'Counter-drone defense',
+      'Tactical strike missions',
+      'Border security and patrol',
       'Critical infrastructure protection',
-      'Disaster response coordination',
-      'Military reconnaissance'
+      'Maritime security operations',
+      'Rapid response scenarios',
+      'Cooperative missions with wingman drones',
+      'Extended mission radius operations',
+      'High-mobility tactical deployment'
     ]
   },
   {
-    id: 'cellular-interception-pro',
-    name: 'Cellular Interception Pro',
-    category: 'intelligence',
-    subcategory: 'Cellular Monitoring',
-    image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Next-generation cellular monitoring system for lawful interception and intelligence operations.',
-    fullDescription: 'Cellular Interception Pro provides law enforcement and intelligence agencies with advanced capabilities to monitor, intercept, and analyze cellular communications. Built with strict compliance frameworks and audit trails.',
-    features: [
-      '2G/3G/4G/5G support',
-      'Real-time voice and data interception',
-      'Location tracking and mapping',
-      'Pattern analysis and link detection',
-      'Encrypted evidence chain',
-      'Court-admissible reporting'
-    ],
-    useCases: [
-      'Counter-terrorism operations',
-      'Organized crime investigations',
-      'National security operations',
-      'Emergency response coordination'
-    ]
-  },
-  {
-    id: 'lawful-interception-lia900',
-    name: 'Lawful Interception Suite LIA-900',
-    category: 'intelligence',
-    subcategory: 'Lawful Interception',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Comprehensive lawful interception platform compliant with international standards.',
-    fullDescription: 'The LIA-900 provides a complete lawful interception solution that meets ETSI and CALEA standards. Designed for telecommunications providers and law enforcement agencies requiring legal compliance and operational efficiency.',
-    features: [
-      'ETSI LI compliance',
-      'CALEA compatibility',
-      'Multi-protocol support',
-      'Centralized management console',
-      'Automated warrant processing',
-      'Secure evidence storage'
-    ],
-    useCases: [
-      'Telecommunications compliance',
-      'Law enforcement investigations',
-      'Judicial oversight operations',
-      'National security monitoring'
-    ]
-  },
-  {
-    id: 'radio-signal-analyzer-rsm500',
-    name: 'Radio Signal Analyzer RSM-500',
-    category: 'intelligence',
-    subcategory: 'Radio Monitoring',
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Wideband radio monitoring and signal analysis platform for spectrum intelligence.',
-    fullDescription: 'The RSM-500 delivers comprehensive radio frequency monitoring and signal analysis capabilities. From HF to microwave bands, this system detects, classifies, and geolocates radio emissions with exceptional accuracy.',
-    features: [
-      'Wideband coverage (1MHz - 40GHz)',
-      'Real-time spectrum analysis',
-      'Direction finding and geolocation',
-      'Signal classification and demodulation',
-      'Database of known emitters',
-      'Mobile and fixed deployment options'
-    ],
-    useCases: [
-      'Spectrum management',
-      'Counter-surveillance operations',
-      'Electronic warfare support',
-      'Border control communications monitoring'
-    ]
-  },
-  {
-    id: 'dark-web-intelligence-tracker',
-    name: 'Dark Web Intelligence Tracker',
-    category: 'intelligence',
-    subcategory: 'Cyber Intelligence',
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Advanced dark web monitoring and threat intelligence platform.',
-    fullDescription: 'The Dark Web Intelligence Tracker continuously monitors hidden networks, forums, and marketplaces to identify threats, compromised data, and criminal activities before they impact your organization or national security.',
-    features: [
-      'Continuous dark web monitoring',
-      'Automated threat detection',
-      'Credential leak alerts',
-      'Criminal marketplace tracking',
-      'Entity relationship mapping',
-      'Custom alert configurations'
-    ],
-    useCases: [
-      'Threat intelligence gathering',
-      'Brand protection',
-      'Counter-terrorism',
-      'Financial crime investigation',
-      'Data breach detection'
-    ]
-  },
-  {
-    id: 'network-intelligence-nip360',
-    name: 'Network Intelligence Platform NIP-360',
-    category: 'intelligence',
-    subcategory: 'Network Intelligence',
-    image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Enterprise-grade network traffic analysis and threat detection system.',
-    fullDescription: 'NIP-360 provides deep packet inspection, traffic analysis, and threat detection across enterprise and carrier networks. Identify anomalies, detect intrusions, and gain complete visibility into network communications.',
-    features: [
-      'Deep packet inspection',
-      'Traffic analysis and metadata extraction',
-      'Anomaly detection with ML',
-      'Network forensics capabilities',
-      'High-speed capture (100Gbps+)',
-      'Integration with SIEM systems'
-    ],
-    useCases: [
-      'Network security monitoring',
-      'Incident response',
-      'Compliance monitoring',
-      'Threat hunting operations'
-    ]
-  },
-  // Defense & Military Products
-  {
-    id: 'rcied-jammer-shield-x',
-    name: 'RCIED Jammer Shield-X',
-    category: 'defense',
-    subcategory: 'Electronic Warfare',
-    image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Radio-Controlled Improvised Explosive Device jammer for convoy and VIP protection.',
-    fullDescription: 'Shield-X provides comprehensive protection against RCIED threats through advanced jamming technology. Designed for military convoys, VIP motorcades, and static installations, it neutralizes remote detonation signals across all common threat frequencies.',
-    features: [
-      'Multi-band jamming (20MHz - 6GHz)',
-      'Reactive jamming technology',
-      'Vehicle and portable variants',
-      'Smart frequency management',
-      'Friendly communications protection',
-      'Real-time threat logging'
-    ],
-    useCases: [
-      'Military convoy protection',
-      'VIP motorcade security',
-      'EOD operations support',
-      'Critical infrastructure protection',
-      'Special operations missions'
-    ]
-  },
-  {
-    id: 'rf-jammer-storm-200',
-    name: 'RF Jammer Storm-200',
-    category: 'defense',
+    id: 'ew-spectrum-analyzer',
+    name: 'Spectrum Guard EW System',
+    category: 'Electronic Warfare & C-UAS',
     subcategory: 'Electronic Warfare',
     image: 'https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'High-power RF jammer for communications denial and electronic attack.',
-    fullDescription: 'Storm-200 delivers powerful electronic attack capabilities to deny enemy communications and navigation systems. With modular design and scalable power output, it adapts to tactical and strategic requirements.',
+    shortDescription: 'Advanced electronic warfare system for spectrum monitoring and dominance.',
+    fullDescription: 'Provides comprehensive spectrum awareness and electronic attack capabilities. Detects and analyzes hostile signals while offering jamming and suppression options to maintain electromagnetic dominance.',
     features: [
-      'Scalable power output (10W - 2kW)',
-      'Software-defined waveforms',
-      'GPS/GLONASS denial',
-      'Communications jamming',
-      'Remote operation capability',
-      'Rapid deployment design'
+      'Wideband spectrum monitoring',
+      'Direction finding and geolocation',
+      'Signal classification',
+      'Adaptive jamming',
+      'Electronic protection',
+      'Portable and vehicle-mounted options'
     ],
     useCases: [
-      'Electronic attack missions',
-      'Area denial operations',
-      'Force protection',
-      'Counter-drone operations',
-      'Special operations support'
+      'Battlefield spectrum management',
+      'Threat warning',
+      'Counter-communications',
+      'Signal intelligence'
     ]
   },
   {
-    id: 'air-defense-radar-ard900',
-    name: 'Air Defense Radar ARD-900',
-    category: 'defense',
-    subcategory: 'Radars',
-    image: 'https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Advanced 3D air surveillance radar for integrated air defense systems.',
-    fullDescription: 'The ARD-900 is a state-of-the-art 3D air surveillance radar designed for medium to long-range detection and tracking. AESA technology provides electronic beam steering, jam resistance, and multiple target tracking capabilities.',
+    id: 'uas-surveillance',
+    name: 'RAVVIK Tactical UAS',
+    category: 'Electronic Warfare & C-UAS',
+    subcategory: 'UAS',
+    image: 'https://images.unsplash.com/photo-1579829366248-204fe8413f31?w=1200&h=800&fit=crop&q=85',
+    shortDescription: 'Indigenously designed unmanned aerial system for surveillance and reconnaissance.',
+    fullDescription: 'A rugged, versatile UAS platform optimized for tactical ISR missions. Features autonomous navigation, secure data links, and modular payload capability for diverse operational requirements.',
     features: [
-      'AESA technology',
-      '3D surveillance (azimuth, range, height)',
-      '400km detection range',
-      'Track-while-scan (500+ targets)',
-      'Anti-jamming features',
-      'Integrated IFF'
+      'Long-endurance flight',
+      'EO/IR stabilized gimbal',
+      'Secure encrypted data link',
+      'Autonomous waypoint navigation',
+      'Rapid deployment',
+      'Low acoustic signature'
     ],
     useCases: [
-      'National air defense',
-      'Airfield protection',
-      'Naval task force defense',
-      'Early warning systems'
+      'Aerial reconnaissance',
+      'Target acquisition',
+      'Damage assessment',
+      'Perimeter patrol'
+    ]
+  },
+  // Tactical Training
+  {
+    id: 'container-fire-range',
+    name: 'Modular Containerized Firing Range',
+    category: 'Tactical Training',
+    subcategory: 'Firing Ranges',
+    image: 'https://images.unsplash.com/photo-1595590424283-b8f1d44b1c28?w=1200&h=800&fit=crop&q=85',
+    shortDescription: 'Turnkey containerized shooting range for safe, controlled live-fire training.',
+    fullDescription: 'A fully self-contained firing range solution housed in ballistic-rated containers. Offers a safe, controlled environment for small arms training with integrated ventilation, target retrieval, and bullet traps.',
+    features: [
+      'Ballistic steel construction',
+      'HEPA filtration and ventilation',
+      'Automated target systems',
+      'Sound dampening',
+      'Climate control',
+      'Rapid installation and relocation'
+    ],
+    useCases: [
+      'Police station training',
+      'Military unit qualification',
+      'Special forces tactical drills',
+      'Private security training'
     ]
   },
   {
-    id: 'weapon-locating-radar-wlr22',
-    name: 'Weapon Locating Radar WLR-22',
-    category: 'defense',
-    subcategory: 'Radars',
-    image: 'https://images.unsplash.com/photo-1581092583537-20d51876c1f7?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Counter-battery radar for artillery and mortar fire location.',
-    fullDescription: 'WLR-22 rapidly detects and tracks incoming projectiles, computing launch and impact points in real-time. Essential for force protection and counter-fire operations in modern artillery warfare.',
+    id: 'shoot-house-cqb',
+    name: 'CQB Shoot House Facility',
+    category: 'Tactical Training',
+    subcategory: 'Shoot Houses',
+    image: 'https://images.unsplash.com/photo-1590422553965-f8c634c0388d?w=1200&h=800&fit=crop&q=85',
+    shortDescription: 'Customizable shoot house for realistic close quarters battle training.',
+    fullDescription: 'Indigenously designed ballistic shoot houses for live-fire CQB training. Features reconfigurable walls, breachable doors, and overhead catwalks for instructor review, enabling complex scenario-based training.',
     features: [
-      '360° surveillance',
-      'Simultaneous tracking of multiple threats',
-      'Artillery, mortar, and rocket detection',
-      'Impact point prediction',
-      'Counter-fire data generation',
-      'Mobile and deployable design'
+      'Ballistic wall systems (360° protection)',
+      'Breaching door integration',
+      'Overhead observation catwalks',
+      'Modular reconfigurable layout',
+      'Video monitoring integration',
+      'Safety signaling systems'
     ],
     useCases: [
-      'Counter-battery operations',
-      'Force protection',
-      'Base defense',
-      'Artillery fire correction'
+      'Urban warfare training',
+      'Room clearing drills',
+      'Hostage rescue scenarios',
+      'Active shooter response'
     ]
   },
   {
-    id: 'fire-control-radar-fcr88',
-    name: 'Fire Control Radar FCR-88',
-    category: 'defense',
-    subcategory: 'Fire Control',
-    image: 'https://images.unsplash.com/photo-1581092160607-ee22621dd758?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Precision fire control radar for weapons guidance and target engagement.',
-    fullDescription: 'The FCR-88 provides high-precision target tracking and weapons guidance for air defense and naval applications. Continuous wave and pulse-doppler modes ensure reliable engagement in complex environments.',
+    id: 'ai-shot-detection',
+    name: 'AI Training Analytics Suite',
+    category: 'Tactical Training',
+    subcategory: 'AI Software',
+    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=1200&h=800&fit=crop&q=85',
+    shortDescription: 'AI-powered software for real-time shot detection and performance analysis.',
+    fullDescription: 'Advanced training software that leverages acoustic sensors and computer vision to detect shots, locate hits, and analyze shooter performance. Provides data-driven insights for After-Action Reviews (AAR).',
     features: [
-      'X-band operation',
-      'Multi-target tracking',
-      'Missile guidance capability',
-      'High update rate',
-      'All-weather operation',
-      'Integration with fire control systems'
+      'Acoustic shot detection',
+      'Real-time heatmapping',
+      'Shooter reaction time analysis',
+      'Automated scoring',
+      'Historical performance tracking',
+      'Scenario-based evaluation'
     ],
     useCases: [
-      'Air defense weapons guidance',
-      'Naval fire control',
-      'Point defense systems',
-      'Mobile air defense'
-    ]
-  },
-  {
-    id: 'ground-surveillance-gsr11',
-    name: 'Ground Surveillance Radar GSR-11',
-    category: 'defense',
-    subcategory: 'Radars',
-    image: 'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Portable ground surveillance radar for perimeter security and battlefield awareness.',
-    fullDescription: 'GSR-11 is a lightweight, portable radar designed for ground surveillance, perimeter security, and force protection. Doppler processing distinguishes personnel and vehicles in all conditions.',
-    features: [
-      'Personnel detection to 10km',
-      'Vehicle detection to 24km',
-      'Tripod or vehicle mounted',
-      'Auto-classification algorithms',
-      'GPS integration',
-      'Silent operation'
-    ],
-    useCases: [
-      'Border surveillance',
-      'Perimeter security',
-      'Force protection',
-      'Reconnaissance operations'
-    ]
-  },
-  {
-    id: 'anti-drone-ads7',
-    name: 'Anti-Drone Defense System ADS-7',
-    category: 'defense',
-    subcategory: 'Air Defense',
-    image: 'https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Integrated counter-UAS system for detection, tracking, and neutralization.',
-    fullDescription: 'ADS-7 provides a complete counter-drone solution combining radar, EO/IR, and RF sensors with kinetic and electronic defeat mechanisms. Protects critical assets from the growing UAS threat.',
-    features: [
-      'Multi-sensor detection',
-      'AI-powered classification',
-      'RF jamming defeat',
-      'Directed energy option',
-      'Kinetic interceptor integration',
-      'C2 integration'
-    ],
-    useCases: [
-      'Airport protection',
-      'Critical infrastructure',
-      'Military base defense',
-      'Event security',
-      'VIP protection'
-    ]
-  },
-  {
-    id: 'c4is-command-platform',
-    name: 'C4IS Command Platform CP-Alpha',
-    category: 'defense',
-    subcategory: 'C4IS',
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Unified command and control platform for joint force operations.',
-    fullDescription: 'CP-Alpha integrates all battlefield systems into a unified command platform. Real-time common operational picture, secure communications, and decision support tools enable effective command at all levels.',
-    features: [
-      'Unified operational picture',
-      'Multi-domain integration',
-      'Secure communications',
-      'Decision support AI',
-      'Blue force tracking',
-      'Coalition interoperability'
-    ],
-    useCases: [
-      'Joint force operations',
-      'Tactical command posts',
-      'Operations centers',
-      'Coalition operations'
-    ]
-  },
-  {
-    id: 'tactical-sdr-tsdr5',
-    name: 'Tactical SDR Radio TSDR-5',
-    category: 'defense',
-    subcategory: 'Communication Security',
-    image: 'https://images.unsplash.com/photo-1589254065878-42c9da997008?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Software-defined tactical radio with advanced encryption and waveform flexibility.',
-    fullDescription: 'TSDR-5 is a next-generation tactical radio built on software-defined architecture. Support for multiple waveforms, military-grade encryption, and seamless integration with modern tactical networks.',
-    features: [
-      'Multi-waveform support',
-      'Type 1 encryption',
-      'MANET networking',
-      'Frequency hopping',
-      'Voice and data',
-      'GPS integration'
-    ],
-    useCases: [
-      'Tactical communications',
-      'Special operations',
-      'Coalition interoperability',
-      'Emergency response'
-    ]
-  },
-  {
-    id: 'transportable-satellite-tst400',
-    name: 'Transportable Satellite Terminal TST-400',
-    category: 'defense',
-    subcategory: 'Communication Security',
-    image: 'https://images.unsplash.com/photo-1516849677043-ef67c9557e16?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'Rapid-deploy satellite communications terminal for expeditionary operations.',
-    fullDescription: 'TST-400 provides high-bandwidth satellite connectivity anywhere in the world within minutes. Auto-pointing antenna, rugged design, and multi-band capability ensure reliable SATCOM in demanding environments.',
-    features: [
-      'X-band and Ku-band operation',
-      'Auto-acquire antenna',
-      '10 minute setup time',
-      'High-throughput capability',
-      'Integrated COMSEC',
-      'Ruggedized design (MIL-STD)'
-    ],
-    useCases: [
-      'Expeditionary headquarters',
-      'Disaster response',
-      'Remote site connectivity',
-      'Mobile command posts'
-    ]
-  },
-  {
-    id: 'high-res-satellite-imagery',
-    name: 'High Resolution Satellite Imagery Service',
-    category: 'defense',
-    subcategory: 'Satellite Imagery',
-    image: 'https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'On-demand access to sub-meter resolution satellite imagery worldwide.',
-    fullDescription: 'Access the highest resolution commercial satellite imagery available. Our service provides tasking priority, rapid delivery, and advanced analysis tools for defense and intelligence applications.',
-    features: [
-      '30cm resolution imagery',
-      'Multi-spectral options',
-      'Stereo collection',
-      'Change detection',
-      'AI-powered analysis',
-      'Secure delivery'
-    ],
-    useCases: [
-      'Intelligence preparation',
-      'Battle damage assessment',
-      'Infrastructure monitoring',
-      'Treaty verification'
-    ]
-  },
-  {
-    id: 'defense-comm-solutions',
-    name: 'Defense Communication Solutions',
-    category: 'defense',
-    subcategory: 'Communication Security',
-    image: 'https://images.unsplash.com/photo-1558346490-a72e53ae2d4f?w=1200&h=800&fit=crop&q=85',
-    shortDescription: 'End-to-end secure communication infrastructure for defense networks.',
-    fullDescription: 'Comprehensive communication solutions including encrypted voice, data, and video systems. From tactical radios to strategic networks, we ensure secure and reliable communications at every level.',
-    features: [
-      'End-to-end encryption',
-      'Multi-classification handling',
-      'Network redundancy',
-      'Satellite and terrestrial',
-      '24/7 network operations',
-      'Lifecycle support'
-    ],
-    useCases: [
-      'Ministry/HQ communications',
-      'Deployed force networks',
-      'Critical infrastructure',
-      'Emergency backup systems'
+      'Marksmanship training',
+      'Tactical decision evaluation',
+      'Unit performance assessment',
+      'Instructor-led AARs'
     ]
   }
 ];
 
-export const getProductsByCategory = (category: 'intelligence' | 'defense') =>
+export const getProductsByCategory = (category: 'Electronic Warfare & C-UAS' | 'Tactical Training') =>
   products.filter(p => p.category === category);
 
 export const getProductById = (id: string) =>

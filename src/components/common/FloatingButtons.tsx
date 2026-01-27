@@ -19,7 +19,7 @@ const FloatingButtons = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+    <div className="fixed bottom-6 right-6 z-[100] flex flex-col gap-3">
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
@@ -40,17 +40,17 @@ const FloatingButtons = () => {
       </AnimatePresence>
 
       <a
-        href="https://wa.me/1234567890"
+        href="https://wa.me/917777022666?text=Hi%20RAVVIK%20Global%20Solutions%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services."
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
-          'w-14 h-14 rounded-full bg-[#25D366] text-white shadow-lg',
+          'w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl shadow-green-900/20',
           'flex items-center justify-center',
-          'hover:bg-[#20BD5A] transition-all hover:scale-110'
+          'hover:bg-[#20BD5A] transition-all hover:scale-110 active:scale-95'
         )}
         aria-label="Contact us on WhatsApp"
       >
-        <MessageCircle className="w-6 h-6" />
+        <MessageCircle className="w-7 h-7" />
       </a>
     </div>
   );

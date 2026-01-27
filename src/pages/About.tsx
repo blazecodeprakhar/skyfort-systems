@@ -1,53 +1,38 @@
 import { motion } from 'framer-motion';
-import { Shield, Target, Users, Globe, Award, Zap, Eye, Lock } from 'lucide-react';
+import { Target, Award, Eye, Cpu, Crosshair, Radio, Shield } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import SectionTitle from '@/components/common/SectionTitle';
 import CTASection from '@/components/home/CTASection';
 
 const About = () => {
-  const coreValues = [
+  const coreDomains = [
     {
-      icon: Shield,
-      title: 'Integrity',
-      description: 'Operating with the highest ethical standards in every engagement.',
+      icon: Radio,
+      title: 'Electronic Warfare, UAS & C-UAS',
+      description: 'RAVVIK Global Solutions designs and delivers mission-critical EW and counter-drone systems that enable spectrum awareness, threat detection, identification, and neutralization in complex operational environments. Our solutions support modern battlefield requirements, homeland security, and critical infrastructure protection.',
+      details: []
     },
     {
-      icon: Target,
-      title: 'Excellence',
-      description: 'Delivering superior solutions that exceed client expectations.',
+      icon: Crosshair,
+      title: 'Firing Range & Shoot House Solutions',
+      description: 'We offer indigenously designed firing ranges and shoot houses for military, paramilitary, police, and special forces training.',
+      details: [
+        'Containerized and permanent firing ranges',
+        'Shoot houses and CQB training facilities',
+        'Live-fire, dry-fire, and hybrid training environments',
+        'Ballistic containment systems and safety infrastructure'
+      ]
     },
     {
-      icon: Zap,
-      title: 'Innovation',
-      description: 'Continuously advancing technology to stay ahead of emerging threats.',
-    },
-    {
-      icon: Lock,
-      title: 'Security',
-      description: 'Protecting sensitive information and maintaining operational security.',
-    },
-  ];
-
-  const whyChooseUs = [
-    {
-      icon: Eye,
-      title: 'Deep Industry Expertise',
-      description: 'Our team comprises former military officers, intelligence analysts, and defense industry veterans with decades of combined experience.',
-    },
-    {
-      icon: Globe,
-      title: 'Global Footprint',
-      description: 'With operations in over 40 countries, we understand regional requirements and maintain strong relationships with defense establishments worldwide.',
-    },
-    {
-      icon: Users,
-      title: 'Customer-Centric Approach',
-      description: 'We work as an extension of your team, providing tailored solutions and responsive support throughout the project lifecycle.',
-    },
-    {
-      icon: Award,
-      title: 'Proven Track Record',
-      description: 'Over 120 successfully completed defense projects with zero security incidents and consistently high customer satisfaction ratings.',
+      icon: Cpu,
+      title: 'AI-Enabled Shot Detection & Training Software',
+      description: 'Advanced AI-powered software platforms that enhance training effectiveness and operational readiness.',
+      details: [
+        'Acoustic and sensor-based shot detection and localization',
+        'Real-time hit/miss analysis and shooter performance metrics',
+        'After-Action Review (AAR) and data-driven feedback',
+        'Scenario-based training evaluation and progression tracking'
+      ]
     },
   ];
 
@@ -60,17 +45,16 @@ const About = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            className="max-w-3xl mx-auto text-center"
+            className="max-w-4xl mx-auto text-center"
           >
             <span className="inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full bg-accent/20 text-accent mb-4">
               About Us
             </span>
             <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl text-white mb-6">
-              Who We Are
+              RAVVIK Global Solutions
             </h1>
-            <p className="text-white/70 text-lg md:text-xl">
-              A trusted partner in defense technology, serving nations with advanced 
-              intelligence and military systems since 2009.
+            <p className="text-white/70 text-lg md:text-xl leading-relaxed">
+              Pioneering indigenous design, development, and integration of advanced defence and security systems.
             </p>
           </motion.div>
         </div>
@@ -81,23 +65,21 @@ const About = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <SectionTitle
-              badge="Company Overview"
-              title="Pioneering Defense Innovation"
+              badge="Overview"
+              title="Building Self-Reliant Defence Capabilities"
               centered={false}
             />
-            
-            <div className="prose prose-lg max-w-none text-muted-foreground">
+
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                className="mb-6"
               >
-                AegisTech Systems was founded in 2009 with a clear mission: to provide 
-                governments and defense organizations with the most advanced technology 
-                solutions for national security. From our headquarters in Arlington, 
-                Virginia, we have grown to become a leading provider of intelligence, 
-                surveillance, reconnaissance, and electronic warfare systems.
+                RAVVIK Global Solutions is a defence deep-technology company focused on the indigenous design, development,
+                and integration of advanced defence and security systems. Our core expertise lies in Electronic Warfare (EW),
+                Unmanned Aerial Systems (UAS), Counter-Unmanned Aerial Systems (C-UAS), and next-generation firing range
+                and tactical training solutions for the modernization of armed forces and security agencies.
               </motion.p>
 
               <motion.p
@@ -105,62 +87,18 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.1 }}
-                className="mb-6"
               >
-                Our portfolio spans the complete spectrum of defense technology, from 
-                satellite monitoring systems and cyber intelligence platforms to 
-                advanced radar systems and secure communications infrastructure. We 
-                serve defense ministries, intelligence agencies, law enforcement 
-                organizations, and critical infrastructure operators across more than 
-                40 countries.
-              </motion.p>
-
-              <motion.p
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.2 }}
-              >
-                What sets us apart is our commitment to understanding each client's 
-                unique operational environment and delivering solutions that integrate 
-                seamlessly with existing systems while providing a decisive technological 
-                advantage.
+                Aligned with the Government of India’s Make in India and Atmanirbhar Bharat initiatives,
+                RAVVIK Global Solutions is committed to building self-reliant, secure, and future-ready defence capabilities
+                through indigenous innovation, local manufacturing, and ownership of critical intellectual property.
               </motion.p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {[
-              { value: '15+', label: 'Years of Excellence', suffix: '' },
-              { value: '40+', label: 'Countries Served', suffix: '' },
-              { value: '120+', label: 'Defense Projects', suffix: '' },
-              { value: '500+', label: 'Security Experts', suffix: '' },
-            ].map((stat, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="text-center"
-              >
-                <div className="font-heading font-bold text-4xl md:text-5xl text-accent mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-muted-foreground">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Mission & Vision */}
-      <section className="py-24 bg-background">
+      <section className="py-20 bg-muted/50">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <motion.div
@@ -174,10 +112,9 @@ const About = () => {
               </div>
               <h3 className="font-heading font-bold text-2xl mb-4 text-foreground">Our Mission</h3>
               <p className="text-muted-foreground">
-                To empower governments and defense organizations with cutting-edge 
-                technology solutions that enhance national security, protect critical 
-                infrastructure, and ensure operational superiority in an increasingly 
-                complex threat environment.
+                To empower armed forces and security agencies with indigenous, technologically advanced EW,
+                C-UAS, and tactical training solutions, enhancing operational readiness, survivability,
+                and decision-making superiority.
               </p>
             </motion.div>
 
@@ -192,80 +129,123 @@ const About = () => {
               </div>
               <h3 className="font-heading font-bold text-2xl mb-4 text-foreground">Our Vision</h3>
               <p className="text-muted-foreground">
-                To be the world's most trusted defense technology partner, recognized 
-                for our innovation, reliability, and unwavering commitment to our 
-                clients' missions. We envision a world where nations can protect their 
-                citizens with the most advanced systems available.
+                To become a globally competitive Indian defence technology company, recognized for innovation,
+                reliability, and meaningful contribution to national security and force modernization.
               </p>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Core Values */}
-      <section className="py-24 bg-navy-600 relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-        <div className="container mx-auto px-4 relative z-10">
+      {/* Core Domains */}
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
           <SectionTitle
-            badge="Core Values"
-            title="What Guides Us"
-            subtitle="The principles that define our approach to every mission"
-            light
+            badge="Expertise"
+            title="Core Domains"
+            subtitle="Delivering excellence across critical defence verticals"
           />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {coreValues.map((value, i) => (
+          <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            {coreDomains.map((item, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center hover:bg-white/10 transition-colors"
+                className="bg-card rounded-xl border border-border p-6 hover:shadow-lg transition-shadow flex flex-col h-full"
               >
-                <div className="w-14 h-14 rounded-xl bg-accent/20 flex items-center justify-center mx-auto mb-4">
-                  <value.icon className="w-7 h-7 text-accent" />
+                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center mb-4 flex-shrink-0">
+                  <item.icon className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="font-heading font-semibold text-lg text-white mb-2">
-                  {value.title}
+                <h3 className="font-heading font-semibold text-xl mb-3 text-foreground">
+                  {item.title}
                 </h3>
-                <p className="text-white/60 text-sm">{value.description}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed mb-4 flex-grow">
+                  {item.description}
+                </p>
+                {item.details.length > 0 && (
+                  <ul className="text-sm text-muted-foreground space-y-2 list-disc pl-4 mt-auto">
+                    {item.details.map((detail, idx) => (
+                      <li key={idx}>{detail}</li>
+                    ))}
+                  </ul>
+                )}
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-24 bg-background">
-        <div className="container mx-auto px-4">
-          <SectionTitle
-            badge="Why Choose Us"
-            title="The AegisTech Advantage"
-            subtitle="What makes us the preferred partner for defense organizations worldwide"
-          />
+      {/* Indigenous Design & Experience */}
+      <section className="py-24 bg-navy-600 relative overflow-hidden">
+        <div className="absolute inset-0 bg-grid-pattern opacity-10" />
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="grid lg:grid-cols-2 gap-16">
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {whyChooseUs.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="flex gap-5 p-6 bg-card rounded-xl border border-border hover:border-accent/30 hover:shadow-card transition-all"
-              >
-                <div className="w-12 h-12 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
-                  <item.icon className="w-6 h-6 text-accent" />
+            {/* Indigenous Design */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 bg-accent/20 rounded-lg">
+                  <Award className="w-6 h-6 text-accent" />
                 </div>
-                <div>
-                  <h3 className="font-heading font-semibold text-lg mb-2 text-foreground">
-                    {item.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm">{item.description}</p>
+                <h2 className="text-3xl font-heading font-bold text-white">Indigenous Design & Commitment</h2>
+              </div>
+              <p className="text-white/70 mb-6">
+                RAVVIK Global Solutions places strong emphasis on self-reliance and local ecosystem development:
+              </p>
+              <ul className="space-y-4">
+                {[
+                  "Indigenous design, development, and system integration",
+                  "Local manufacturing and supply-chain development",
+                  "Minimal dependence on foreign components for critical subsystems",
+                  "Compliance with Indian defence procurement policies, GSQRs, PSQRs, and RFP requirements",
+                  "Collaboration with Indian MSMEs, DPSUs, and academic institutions"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-white/80">
+                    <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
+            {/* Experience */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-center gap-3 mb-6">
+                <div className="p-2 bg-highlight/20 rounded-lg">
+                  <Shield className="w-6 h-6 text-highlight" />
                 </div>
-              </motion.div>
-            ))}
+                <h2 className="text-3xl font-heading font-bold text-white">Experience & Understanding</h2>
+              </div>
+              <p className="text-white/70 mb-6">
+                With extensive experience across defence and security programs, we possess in-depth understanding of:
+              </p>
+              <ul className="space-y-4">
+                {[
+                  "Government tendering and procurement processes",
+                  "User trials, evaluations, and acceptance procedures",
+                  "Customization as per operational feedback",
+                  "Lifecycle support, upgrades, and long-term sustainment",
+                  "Solutions engineered for operational realities and future scalability"
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-white/80">
+                    <div className="w-1.5 h-1.5 rounded-full bg-highlight mt-2.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+
           </div>
         </div>
       </section>

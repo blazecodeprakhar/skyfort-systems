@@ -26,40 +26,36 @@ const HeroSection = () => {
       {/* Grid Pattern Overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
 
-      {/* Content */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 sm:pt-24 lg:pt-32 pb-16 sm:pb-20">
-        <div className="max-w-3xl">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-28 sm:pt-32 lg:pt-36 pb-16 lg:pb-24 h-full flex flex-col justify-center">
+        <div className="max-w-5xl">
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-accent/20 backdrop-blur-sm border border-accent/30 rounded-full text-accent text-xs sm:text-sm font-medium mb-4 sm:mb-6">
-              <Shield className="w-3 h-3 sm:w-4 sm:h-4" />
-              Trusted by 40+ Nations Worldwide
-            </span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 bg-accent/10 hover:bg-accent/20 backdrop-blur-md border border-accent/20 rounded-full text-accent text-xs sm:text-sm font-medium mb-6 sm:mb-8 transition-colors cursor-default">
+              <Shield className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              <span>Advanced Indigenous Defence Technology</span>
+            </div>
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white leading-tight mb-4 sm:mb-6"
+            className="font-heading font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] tracking-tight mb-6 max-w-4xl break-words"
           >
-            Advanced Defense &{' '}
-            <span className="text-gradient">Intelligence</span>{' '}
-            Solutions
+            Advanced <span className="text-white">Indigenous</span> <br className="hidden sm:block" />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent via-accent to-highlight">Defence</span> Solutions
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-white/80 mb-6 sm:mb-8 max-w-2xl"
+            className="text-base sm:text-lg md:text-xl text-white/80 mb-8 sm:mb-10 max-w-2xl leading-relaxed"
           >
-            Securing nations with cutting-edge surveillance, reconnaissance,
-            and defense systems. From satellite monitoring to cyber intelligence,
-            we deliver mission-critical solutions.
+            RAVVIK Global Solutions: Empowering armed forces with indigenous, technologically advanced EW, C-UAS, and tactical training solutions.
           </motion.p>
 
           {/* Trust Indicators */}
@@ -67,15 +63,15 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-wrap gap-3 sm:gap-4 mb-8 sm:mb-10"
+            className="flex flex-wrap gap-x-6 gap-y-3 mb-8 sm:mb-12"
           >
             {[
-              '15+ Years Experience',
-              '120+ Defense Projects',
-              'NATO Compliant',
+              'Deep Tech Expertise',
+              'Indigenous Innovation',
+              'Mission Critical Systems',
             ].map((item, i) => (
-              <div key={i} className="flex items-center gap-2 text-white/70 text-xs sm:text-sm">
-                <CheckCircle2 className="w-3 h-3 sm:w-4 sm:h-4 text-accent flex-shrink-0" />
+              <div key={i} className="flex items-center gap-2 text-white/80 text-sm sm:text-base font-medium">
+                <CheckCircle2 className="w-4 h-4 sm:w-5 sm:h-5 text-accent flex-shrink-0" />
                 <span>{item}</span>
               </div>
             ))}
@@ -86,23 +82,22 @@ const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4"
+            className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto"
           >
             <Link to="/contact" className="w-full sm:w-auto">
-              <Button variant="hero" size="xl" className="w-full sm:w-auto">
+              <Button variant="hero" size="xl" className="w-full sm:w-auto h-12 sm:h-14 text-base font-semibold px-8 shadow-lg shadow-accent/20">
                 Schedule a Call
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
             <Link to="/capabilities" className="w-full sm:w-auto">
-              <Button variant="heroOutline" size="xl" className="w-full sm:w-auto">
-                <Play className="w-4 h-4 sm:w-5 sm:h-5" />
+              <Button variant="heroOutline" size="xl" className="w-full sm:w-auto h-12 sm:h-14 text-base font-semibold px-8 hover:bg-white/5">
+                <Play className="w-5 h-5 mr-2" />
                 Discover More
               </Button>
             </Link>
           </motion.div>
         </div>
-
       </div>
     </section>
   );

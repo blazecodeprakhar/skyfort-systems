@@ -55,7 +55,17 @@ const CTASection = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground mb-1">Call Us</h4>
-                    <p className="text-muted-foreground text-sm">+1-800-AEGIS-01</p>
+                    <p className="text-muted-foreground text-sm">+91-11-4567-8900</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Phone className="w-5 h-5 text-accent" />
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-foreground mb-1">Call Us</h4>
+                    <p className="text-muted-foreground text-sm">+91 - 77770 22666</p>
                   </div>
                 </div>
 
@@ -65,7 +75,7 @@ const CTASection = () => {
                   </div>
                   <div>
                     <h4 className="font-medium text-foreground mb-1">Email Us</h4>
-                    <p className="text-muted-foreground text-sm">info@aegistech.com</p>
+                    <p className="text-muted-foreground text-sm">ravvikglobal@gmail.com</p>
                   </div>
                 </div>
 
@@ -76,8 +86,8 @@ const CTASection = () => {
                   <div>
                     <h4 className="font-medium text-foreground mb-1">Visit Us</h4>
                     <p className="text-muted-foreground text-sm">
-                      1200 Defense Boulevard<br />
-                      Arlington, VA 22202
+                      BUNGLOW NO. 62, SAINT PATRICKS TOWN HOUSING SOCIETY,<br />
+                      HADAPSAR MIDC ROAD, PUNE - 411 013.
                     </p>
                   </div>
                 </div>
