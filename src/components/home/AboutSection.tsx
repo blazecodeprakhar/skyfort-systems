@@ -51,6 +51,25 @@ const AboutSection = () => {
               of critical intellectual property.
             </p>
 
+            {/* Initiative Logos */}
+            <div className="flex flex-row items-center justify-start gap-4 sm:gap-8 mb-8">
+              <img
+                src="/made in india/makeinindia.png"
+                alt="Make In India"
+                className="h-10 sm:h-16 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+              />
+              <img
+                src="/made in india/Startup-India-Hub-Logo-Vector.svg-.png"
+                alt="Startup India"
+                className="h-8 sm:h-12 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+              />
+              <img
+                src="/made in india/IEX-3ff195b9.png"
+                alt="IEX"
+                className="h-6 sm:h-10 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+              />
+            </div>
+
             {/* Stats */}
             <div className="grid grid-cols-3 gap-2 sm:gap-6 mt-8">
               {[

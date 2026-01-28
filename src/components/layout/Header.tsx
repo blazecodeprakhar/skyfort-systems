@@ -6,9 +6,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
 const ewProducts = [
-  { name: 'Electronic Warfare', href: '/products?category=Electronic Warfare' },
-  { name: 'C-UAS', href: '/products?category=C-UAS' },
-  { name: 'UAS', href: '/products?category=UAS' },
+  { name: 'Loitering Munition', href: '/products?category=UAS' },
+  { name: 'RF Detector', href: '/products?category=Electronic Warfare' },
+  { name: 'RF Jammers', href: '/products?category=C-UAS' },
 ];
 
 const trainingProducts = [

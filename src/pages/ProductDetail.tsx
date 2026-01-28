@@ -1,5 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
 import { ArrowLeft, CheckCircle2, Mail, ArrowRight, Shield, Radar, Satellite, Radio, Lock, Crosshair } from 'lucide-react';
 import Layout from '@/components/layout/Layout';
 import { getProductById, products } from '@/data/products';
@@ -131,9 +132,24 @@ const ProductDetail = () => {
               <h2 className="font-heading font-bold text-2xl md:text-3xl mb-6 text-foreground">
                 Overview
               </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                {product.fullDescription}
-              </p>
+              <div className="prose prose-lg dark:prose-invert max-w-none">
+                <ReactMarkdown
+                  components={{
+                    h3: ({ node, ...props }) => <h3 className="text-xl md:text-2xl font-heading font-bold text-navy-900 mt-8 mb-4 border-b border-border pb-2" {...props} />,
+                    p: ({ node, ...props }) => <p className="text-muted-foreground mb-4 leading-relaxed" {...props} />,
+                    ul: ({ node, ...props }) => <ul className="list-none space-y-2 mb-6" {...props} />,
+                    li: ({ node, ...props }) => (
+                      <li className="flex items-start gap-2 text-muted-foreground" {...props}>
+                        <span className="mt-2 w-1.5 h-1.5 rounded-full bg-accent flex-shrink-0" />
+                        <span>{props.children}</span>
+                      </li>
+                    ),
+                    strong: ({ node, ...props }) => <strong className="font-semibold text-navy-800" {...props} />
+                  }}
+                >
+                  {product.fullDescription}
+                </ReactMarkdown>
+              </div>
             </motion.div>
 
             {/* Features & Use Cases Grid */}

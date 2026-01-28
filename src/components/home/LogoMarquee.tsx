@@ -7,9 +7,7 @@ const logos = [
     { name: 'Indian Army', src: '/companys logo/Indian_Army_Insignia_circular.png' },
     { name: 'DRDO', src: '/companys logo/Defence_Research_and_Development_Organisation.svg.png' },
     { name: 'BEL', src: '/companys logo/Bharat_Electronics_Limited_Logo.png' },
-    { name: 'IEX', src: '/companys logo/IEX-3ff195b9.png' },
-    { name: 'Startup India', src: '/companys logo/Startup-India-Hub-Logo-Vector.svg-.png' },
-    { name: 'Make In India', src: '/companys logo/makeinindia.png' },
+    { name: 'Indian Armed Forces', src: '/companys logo/Flag_of_Indian_Armed_Forces.svg.png' },
     { name: 'Partner', src: '/companys logo/19c1d473b34355c7b463ba0a2096a060.png' },
 ];
 
@@ -21,15 +19,16 @@ const LogoMarquee = () => {
 
             <div className="container mx-auto px-4 mb-12 relative z-10">
                 <SectionTitle
-                    badge="Trust"
-                    title="Our Strategic Partners"
+                    badge="Partnerships"
+                    title="Our Distinguished Clients"
+                    subtitle="Trusted by the nation's most critical defense and security organizations"
                     centered
                 />
             </div>
 
             <div className="relative flex w-full flex-col items-center justify-center overflow-hidden z-10">
                 <div
-                    className="group flex overflow-hidden p-2 [--gap:2rem] [gap:var(--gap)] flex-row [--duration:50s]"
+                    className="group flex overflow-hidden p-2 [--gap:2rem] [gap:var(--gap)] flex-row [--duration:35s]"
                 >
                     <div className="flex shrink-0 justify-around [gap:var(--gap)] animate-marquee flex-row group-hover:[animation-play-state:paused] min-w-full items-center">
                         {logos.map((logo, index) => (

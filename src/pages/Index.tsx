@@ -5,7 +5,7 @@ import CapabilitiesSection from '@/components/home/CapabilitiesSection';
 import DefenseSystemVisualization from '@/components/home/DefenseSystemVisualization';
 import FeaturedProducts from '@/components/home/FeaturedProducts';
 import GlobalPresence from '@/components/home/GlobalPresence';
-import ClientsSection from '@/components/home/ClientsSection';
+
 import LogoMarquee from '@/components/home/LogoMarquee';
 import CTASection from '@/components/home/CTASection';
 
@@ -18,7 +18,7 @@ const Index = () => {
       <DefenseSystemVisualization />
       <FeaturedProducts />
       <GlobalPresence />
-      <ClientsSection />
+
       <LogoMarquee />
       <CTASection />
     </Layout>
