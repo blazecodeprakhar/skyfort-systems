@@ -44,9 +44,9 @@ const FloatingButtons = () => {
         target="_blank"
         rel="noopener noreferrer"
         className={cn(
-          'w-14 h-14 rounded-full bg-[#25D366] text-white shadow-xl shadow-green-900/20',
+          'w-14 h-14 rounded-full bg-[#0080ff] text-white shadow-xl shadow-blue-900/20',
           'flex items-center justify-center',
-          'hover:bg-[#20BD5A] transition-all hover:scale-110 active:scale-95'
+          'hover:bg-[#0066cc] transition-all hover:scale-110 active:scale-95'
         )}
         aria-label="Contact us on WhatsApp"
       >

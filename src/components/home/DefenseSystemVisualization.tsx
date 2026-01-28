@@ -87,12 +87,12 @@ const DefenseSystemVisualization = () => {
       'accent': {
         bg: 'bg-accent',
         border: 'border-accent',
-        shadow: 'shadow-[0_0_30px_rgba(46,139,87,0.5)]'
+        shadow: 'shadow-[0_0_30px_rgba(0,128,255,0.5)]'
       },
       'military-400': {
         bg: 'bg-military-400',
         border: 'border-military-400',
-        shadow: 'shadow-[0_0_30px_rgba(46,139,87,0.5)]'
+        shadow: 'shadow-[0_0_30px_rgba(0,128,255,0.5)]'
       },
       'highlight': {
         bg: 'bg-highlight',
@@ -132,9 +132,9 @@ const DefenseSystemVisualization = () => {
           <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
             <defs>
               <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="hsl(146, 55%, 36%)" stopOpacity="0.3" />
+                <stop offset="0%" stopColor="hsl(212, 100%, 50%)" stopOpacity="0.3" />
                 <stop offset="50%" stopColor="hsl(180, 100%, 50%)" stopOpacity="0.8" />
-                <stop offset="100%" stopColor="hsl(146, 55%, 36%)" stopOpacity="0.3" />
+                <stop offset="100%" stopColor="hsl(212, 100%, 50%)" stopOpacity="0.3" />
               </linearGradient>
             </defs>
             {connections.map((conn, i) => {
