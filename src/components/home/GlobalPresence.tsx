@@ -3,12 +3,9 @@ import { MapPin } from 'lucide-react';
 import SectionTitle from '@/components/common/SectionTitle';
 
 const regions = [
-  { name: 'North America', countries: 8, projects: 35 },
-  { name: 'Europe', countries: 15, projects: 42 },
   { name: 'Middle East', countries: 12, projects: 28 },
   { name: 'Asia Pacific', countries: 10, projects: 22 },
   { name: 'Africa', countries: 8, projects: 15 },
-  { name: 'Latin America', countries: 5, projects: 8 },
 ];
 
 const GlobalPresence = () => {
@@ -16,12 +13,12 @@ const GlobalPresence = () => {
     <section className="py-24 bg-navy-600 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <SectionTitle
           badge="Global Presence"
           title="Operational Worldwide"
-          subtitle="Supporting defense and intelligence operations across six continents"
+          subtitle="Supporting defense and security operations across key strategic regions"
           light
         />
 
@@ -67,8 +64,8 @@ const GlobalPresence = () => {
           className="mt-16 flex flex-wrap justify-center gap-12"
         >
           {[
-            { value: '58+', label: 'Partner Countries' },
-            { value: '150+', label: 'Active Contracts' },
+            { value: '10+', label: 'Partner Countries' },
+            { value: '15+', label: 'Active Contracts' },
             { value: '24/7', label: 'Global Support' },
           ].map((stat, i) => (
             <div key={i} className="text-center">

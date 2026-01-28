@@ -14,10 +14,10 @@ export const products: Product[] = [
   // Electronic Warfare & C-UAS
   {
     id: 'c-uas-drone-shield',
-    name: 'RAVVIK Loitering Missile System',
+    name: 'RAVVIK Loitering Missile',
     category: 'Electronic Warfare & C-UAS',
     subcategory: 'C-UAS',
-    image: '/loitering-missile.png',
+    image: '/products/RAVVIK Loitering Missile/loitering-missile.png',
     shortDescription: 'AI-powered loitering missile system with modular deployment for special missions.',
     fullDescription: `Developed and manufactured in Taiwan, this advanced loitering missile system features AI vision-based tracking and targeting capabilities. The modular design supports various deployment methods including single-user, airborne, shipborne, and vehicle-mounted configurations.
 
@@ -75,7 +75,7 @@ Once a target is confirmed, the system transmits its image and coordinate data i
       'Battlefield spectrum management',
       'Threat warning',
       'Counter-communications',
-      'Signal intelligence'
+      'Signal analysis'
     ]
   },
   {

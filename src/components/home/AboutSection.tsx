@@ -52,9 +52,9 @@ const AboutSection = () => {
             </p>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-6">
+            <div className="grid grid-cols-3 gap-2 sm:gap-6 mt-8">
               {[
-                { value: 'Deep Tech', label: 'Ecosystem' },
+                { value: 'DeepTech', label: 'Ecosystem' },
                 { value: 'Indigenous', label: 'Innovation' },
                 { value: 'Mission', label: 'Ready' },
               ].map((stat, i) => (
@@ -64,12 +64,14 @@ const AboutSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className="text-center"
+                  className="text-center p-2 md:p-0 rounded-lg bg-accent/5 md:bg-transparent border border-accent/10 md:border-0"
                 >
-                  <div className="font-heading font-bold text-2xl md:text-3xl text-accent mb-1">
-                    {stat.value}
+                  <div className="font-heading font-bold text-sm sm:text-2xl md:text-3xl text-accent mb-1 leading-tight">
+                    {stat.value.split(' ').map((word, wI) => (
+                      <span key={wI} className="block sm:inline">{word} <span className="hidden sm:inline"> </span></span>
+                    ))}
                   </div>
-                  <div className="text-muted-foreground text-sm">{stat.label}</div>
+                  <div className="text-muted-foreground text-[10px] sm:text-sm uppercase tracking-wide">{stat.label}</div>
                 </motion.div>
               ))}
             </div>

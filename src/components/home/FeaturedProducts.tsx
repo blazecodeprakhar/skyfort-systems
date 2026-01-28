@@ -19,7 +19,7 @@ const FeaturedProducts = () => {
         <SectionTitle
           badge="Our Products"
           title="Defense Solutions Portfolio"
-          subtitle="Explore our comprehensive range of intelligence and defense systems"
+          subtitle="Explore our comprehensive range of surveillance and defense systems"
         />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

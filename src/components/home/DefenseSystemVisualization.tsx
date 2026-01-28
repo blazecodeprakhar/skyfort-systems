@@ -252,7 +252,7 @@ const DefenseSystemVisualization = () => {
         {/* Legend */}
         <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-8 sm:mt-12 lg:mt-16 px-4">
           {[
-            { color: 'bg-accent', label: 'Intelligence & Surveillance' },
+            { color: 'bg-accent', label: 'Reconnaissance & Surveillance' },
             { color: 'bg-military-400', label: 'Defense Systems' },
             { color: 'bg-highlight', label: 'Communications' },
           ].map((item) => (
